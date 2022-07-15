@@ -45,10 +45,16 @@
 .header{
     display: flex;
     justify-content:space-between;
-    width:360px;
+    width:380px;
     padding-left: 19px;
 
 }
 .mar{
     margin-bottom: 10px;
+}
+.calendar-head{
+    font-weight: bold;
+}
+.bold-text{
+    font-weight: bold;
 }

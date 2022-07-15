@@ -1,5 +1,6 @@
 import moment from "moment"
 import "./Calendar.css"
+import {Box,Text} from "@chakra-ui/react"
 import { useState,useEffect } from "react";
 export const Calender=()=>{
 const [calendar,setCalendar]=useState([]);
@@ -53,31 +54,31 @@ const nextMonth=()=>{
     return value.clone().add(1,"month")
 }
     return(
-        <div className="calendar">
-            <div className="header">
-                <h3>{currentMonth()} {currentYear()}</h3>
-                <div className="keys">
-                <h3 onClick={()=>setValue(previousMonth())}>{"<"}</h3>
-                <h3 onClick={()=>setValue(nextMonth())}>{">"}</h3> 
-            </div>
-            </div>
-            <div className="week mar">
+        <Box className="calendar">
+            <Box className="header">
+                <Text className="calendar-head bold-text">{currentMonth()} {currentYear()}</Text>
+                <Box className="keys">
+                <Text className="bold-text" onClick={()=>setValue(previousMonth())}>{"<"}</Text>
+                <Text className="bold-text" onClick={()=>setValue(nextMonth())}>{">"}</Text> 
+            </Box>
+            </Box>
+            <Box className="week mar">
                 {dayName.map((d)=>(
-                    <div>{d}</div>
+                    <Text className="bold-text">{d}</Text>
                 ))}
-            </div>
-           <div>
+            </Box>
+           <Box>
            {calendar.map((week)=>(
-            <div className="week">
+            <Box className="week">
                 {week.map((day)=>(
                     
-                  <div className="day" onClick={()=>setValue(day)}>
-                    <div className={styleOfDay(day)}>{day.format("D")}</div>
-                   </div>
+                  <Box className="day" onClick={()=>setValue(day)}>
+                    <Text className={styleOfDay(day)}>{day.format("D")}</Text>
+                   </Box>
                 ))}
-            </div>
+            </Box>
            ))}
-           </div>
-        </div>
+           </Box>
+        </Box>
     )
 }
