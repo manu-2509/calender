@@ -1,0 +1,54 @@
+.calendar{
+    width:400px;
+    margin:auto;
+}
+.day{
+    position: relative;
+    height:30px;
+    background-color:white;
+    padding:2px;
+    margin-bottom:5px;
+    box-sizing: border-box;
+    z-index: 1;
+    text-align: center;
+    width: 40px;
+    border-radius:50%
+
+}
+.week{
+    display:flex;
+    width:400px;
+    justify-content:space-around
+}
+.selected{
+    background-color:rgb(53, 112, 214);
+    padding:3px;
+    border-radius:50%;
+}
+.day:hover{
+    background-color:rgba(151, 209, 240, 0.792);
+}
+.today{
+    background-color:rgba(128, 128, 128, 0.451);
+     padding:3px;
+    border-radius:50%;
+}
+.before{
+    color: grey;
+  
+}
+.keys{
+    display: flex;
+    width:50px;
+    justify-content:space-between
+}
+.header{
+    display: flex;
+    justify-content:space-between;
+    width:360px;
+    padding-left: 19px;
+
+}
+.mar{
+    margin-bottom: 10px;
+}
